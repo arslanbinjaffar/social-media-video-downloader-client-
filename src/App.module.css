@@ -1,4 +1,6 @@
 .main-div {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 150px);
   position: relative;
+  color: white;
+  padding: 1rem 2rem;
 }
