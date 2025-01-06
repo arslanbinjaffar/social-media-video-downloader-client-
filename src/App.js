@@ -9,6 +9,7 @@ import {
   TermsAndConditions,
   PrivacyPolicy,
   Home,
+  BlogDetail,
 } from "./Pages/index";
 import Footer from "./components/Layout/Footer";
 import { Route, Routes } from "react-router-dom";
@@ -20,7 +21,8 @@ function App() {
       <div className={styles["main-div"]}>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/blog/:title" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/faqs" element={<FAQs />} />

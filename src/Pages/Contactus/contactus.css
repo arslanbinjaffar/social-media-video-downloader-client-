@@ -1,0 +1,114 @@
+/* Global Styles - Contact Us Page */
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --background-color: rgb(15, 15, 15);
+  --header-logo-color: white;
+  --h1-font-color: white;
+  --p-font-color: rgb(201, 201, 201);
+  --input-background: #20212c;
+  --input-text-color: rgb(223, 223, 223);
+  --input-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.38);
+  --input-placeholder-text-color: rgb(187, 187, 187);
+  --input-button-background-color: #f30049ce;
+  --input-button-hover-background-color: #a50037;
+  --footer-text-color: rgb(223, 223, 223);
+  --form-background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  --form-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.38);
+  --button-background-color: #f30049ce;
+  --button-hover-color: #a50037;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --background-color: rgb(255, 255, 255);
+  --h1-font-color: #1e1e1e;
+  --p-font-color: #5c5c5c;
+  --header-logo-color: #2c2c2c;
+  --input-background: rgb(255, 255, 255);
+  --input-text-color: rgb(34, 34, 34);
+  --input-box-shadow: 0px 0px 20px 1px rgb(138 138 138 / 38%);
+  --input-placeholder-text-color: rgb(121, 121, 121);
+  --input-button-background-color: #1477e9e7;
+  --input-button-hover-background-color: rgba(15, 105, 207, 0.906);
+  --footer-text-color: rgb(70, 70, 70);
+  --form-background-color: rgba(255, 255, 255, 0.7); /* Dimmed background */
+  --form-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  --button-background-color: #1477e9e7;
+  --button-hover-color: rgba(15, 105, 207, 0.906);
+}
+
+/* Contact Us Page Styles */
+.contact-container {
+  background-color: var(--background-color);
+  color: var(--p-font-color);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: var(--form-background-color);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: var(--form-box-shadow);
+}
+
+.contact-form h1 {
+  color: var(--h1-font-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form p {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-background-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--input-box-shadow);
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.contact-form .footer {
+  text-align: center;
+  color: var(--footer-text-color);
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Error Message */
+.error {
+  background-color: #ff4d4d;
+  padding: 10px;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}

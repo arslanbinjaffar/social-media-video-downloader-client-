@@ -1,14 +1,46 @@
 import React from "react";
-import styles from "../index.module.css";
-const index = () => {
+import { useTranslation } from "react-i18next";
+import styles from "./PrivacyPolicy.module.css";
+
+const PrivacyPolicy = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Page Under Development</h1>
-      <p className={styles.message}>
-        We're working hard to bring this page to life. Stay tuned for updates!
+      <h1 className={styles.title}>{t("title")}</h1>
+      <p className={styles.date}>
+        {t("effectiveDate", {
+          day: new Date().getDate(),
+          month: new Date().getMonth() + 1,
+        })}
       </p>
+
+      <section className={styles.section}>
+        <h2>{t("introductionHeading")}</h2>
+        <p>{t("introductionContent")}</p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>{t("informationHeading")}</h2>
+        <p>{t("informationContent")}</p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>{t("howWeCollectHeading")}</h2>
+        <p>{t("howWeCollectContent")}</p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>{t("purposeOfDataHeading")}</h2>
+        <p>{t("purposeOfDataContent")}</p>
+      </section>
+
+      <section className={styles.section}>
+        <h2>{t("contactUsHeading")}</h2>
+        <p>{t("contactUsContent")}</p>
+      </section>
     </div>
   );
 };
 
-export default index;
+export default PrivacyPolicy;

@@ -1,20 +1,25 @@
 import style from "./IndexMessage.module.css";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const IndexMessage = () => {
+  const { t } = useTranslation();
   return (
     <div className={style["index-div"]}>
       <h1>
-        <span className={style["head-one"]}>Vidown </span>
-        <span className={style["head-two"]}>Video </span>
-        Do<span className={style["head-three"]}>wnload</span>er
+        <span className={style["head-one"]}>
+          {t("vidown_title").split(" ")[0]}
+        </span>
+        <span className={style["head-two"]}>
+          {t("vidown_title").split(" ")[1]}
+        </span>
+        <span className={style["head-three"]}>
+          {" "}
+          {t("vidown_title").split(" ")[2]}
+        </span>
       </h1>
-      <p>
-        Try this unique tool for quick, hassle-free downloads from YouTube ,
-        Facebook, Instagram and X. Transform your offline video collection with
-        this reliable and efficient downloader.
-      </p>
+      <p>{t("vidown_description")}</p>
 
       <img
         className={style["yt-logo"]}

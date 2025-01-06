@@ -1,0 +1,74 @@
+.blogDetailsContainer {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  color: var(--p-font-color);
+}
+
+.blogHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.blogTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--h1-font-color);
+}
+
+.blogDescription {
+  font-size: 1.2rem;
+  color: var(--p-font-color);
+}
+
+.blogIntro {
+  margin-bottom: 1.5rem;
+}
+
+.blogList {
+  margin-bottom: 1.5rem;
+}
+
+.blogList ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.cardSection {
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: 1px solid var(--result-border);
+  background: var(--result-background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  background: var(--result-table-bg-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.blogConclusion {
+  margin-top: 2rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.py12 {
+  padding: 3rem 0;
+}

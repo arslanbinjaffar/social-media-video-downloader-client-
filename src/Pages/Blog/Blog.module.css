@@ -1,0 +1,80 @@
+/* Blog.module.css */
+.blogContainer {
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (min-width: 640px) {
+  .blogContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 24rem;
+  background: var(--result-background-color);
+  border: 1px solid var(--result-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: var(--result-table-bg-color);
+  text-align: center;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  color: var(--p-font-color);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--h1-font-color);
+  margin-top: 1rem;
+}
+
+.cardDescription {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--p-font-color);
+}
+
+.cardList {
+  margin-top: 1rem;
+  list-style: disc inside;
+}
+
+.exploreButton {
+  margin-top: 1rem;
+  background-color: var(--input-button-background-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.exploreButton:hover {
+  background-color: darken(var(--input-button-background-color), 10%);
+}

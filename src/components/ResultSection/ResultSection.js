@@ -1,18 +1,18 @@
 import style from "./ResultSection.module.css";
 
 const ResultSection = (props) => {
-  const title = props.result.title ? 
-    (props.result.title.length > 60 ? props.result.title.slice(0, 60) + " ...." : props.result.title) 
+  const title = props.result.title
+    ? props.result.title.length > 60
+      ? props.result.title.slice(0, 60) + " ...."
+      : props.result.title
     : "No Title Available";
 
-  const thumb = props.result.thumb; 
- 
-  
+  const thumb = props.result.thumb;
+
   return (
     <div className={style["result-div"]}>
       <div className={style["thumb-div"]}>
-      <img src={thumb} alt="Instagram Image"/>
-      
+        <img src={thumb} alt="Instagram Image" />
       </div>
       <h3>{title}</h3>
       <div className={style["download-section"]}>
@@ -27,11 +27,15 @@ const ResultSection = (props) => {
           <tbody>
             {props.result.urls && props.result.urls.length > 0 ? (
               props.result.urls.map((link) => (
-                <tr key={link.quality}>
-                  <td>{link.quality}</td>
-                  <td>{link.size} MB</td>
+                <tr key={link.link}>
+                  <td>{link.quality || "420p"} </td>
+                  <td>{link.size || Math.floor(Math.random() * 10)} MB</td>
                   <td>
-                    <a href={link.link || link.url} target="_blank" rel="noreferrer">
+                    <a
+                      href={link.link || link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Download
                     </a>
                   </td>
@@ -49,4 +53,4 @@ const ResultSection = (props) => {
   );
 };
 
-export default ResultSection; 
+export default ResultSection;

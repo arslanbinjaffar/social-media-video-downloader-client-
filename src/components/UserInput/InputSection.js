@@ -1,15 +1,17 @@
 import style from "./InputSection.module.css";
-import {useState} from "react";
+import { useState } from "react";
 import urlLightIcon from "../../assets/icons8-url-48-light.png";
 import urlDarkIcon from "../../assets/icons8-url-48-dark.png";
-import {useTheme} from "../../store/ThemeContext";
+import { useTheme } from "../../store/ThemeContext";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const InputSection = (props) => {
   const [userInput, setUserInput] = useState("");
   const [isInputValid, setInputValid] = useState(true);
   const { theme } = useTheme();
+  const { t } = useTranslation(); // Initialize useTranslation
 
-  const userInputHnadler = (e) => {
+  const userInputHandler = (e) => {
     setInputValid(true);
     setUserInput(e.target.value);
   };
@@ -40,7 +42,7 @@ const InputSection = (props) => {
       }
       props.userUrls(userInput, type);
     } else {
-      props.userUrls("Please enter a valid URL.", "error");
+      props.userUrls(t("error_message"), "error");
       setInputValid(false);
     }
   };
@@ -58,14 +60,14 @@ const InputSection = (props) => {
         }
         type="text"
         name="search"
-        placeholder="Past Link Here"
-        onChange={userInputHnadler}
+        placeholder={t("paste_here_link")}
+        onChange={userInputHandler}
         value={userInput || ""}
         required
         aria-required
       ></input>
       <button className={style["btn"]} type="submit">
-        Search
+        {t("search")}
       </button>
     </form>
   );
