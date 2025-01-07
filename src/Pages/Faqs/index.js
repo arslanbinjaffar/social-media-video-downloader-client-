@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next"; // Import useTranslation
+import { useTranslation } from "react-i18next";
+import styles from "./FAQs.module.css"; // Import your CSS Module
 
 const FAQs = () => {
-  const { t } = useTranslation(); // Get the t function for translation
-
+  const { t } = useTranslation();
   const faqItems = [
     { question: t("faq_question_1"), answer: t("faq_answer_1") },
     { question: t("faq_question_2"), answer: t("faq_answer_2") },
@@ -24,26 +24,23 @@ const FAQs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full min-h-screen bg-gray-50 text-gray-800">
-      <header className="w-full py-8 bg-gray-100 text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900">{t("FAQs")}</h1>
+    <div className={`${styles.container}`}>
+      <header className={styles.header}>
+        <h1>{t("FAQs")}</h1>
       </header>
 
-      <main className="w-full px-4 sm:px-12 md:px-20 lg:px-32 max-w-4xl">
+      <main className={styles.main}>
         <div className="space-y-4">
           {faqItems.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-300 rounded-md shadow-sm"
-            >
+            <div key={index} className={styles.faqItem}>
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-4 py-3 text-left text-lg font-semibold bg-gray-200 rounded-md hover:bg-gray-300"
+                className={styles.faqButton}
               >
                 {faq.question}
               </button>
               {openIndex === index && (
-                <div className="px-4 py-3 text-gray-700">{faq.answer}</div>
+                <div className={styles.faqAnswer}>{faq.answer}</div>
               )}
             </div>
           ))}

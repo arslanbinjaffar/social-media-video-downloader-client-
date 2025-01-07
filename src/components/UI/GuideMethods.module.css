@@ -1,0 +1,93 @@
+:root {
+    --background-color: #ffffff;
+    --header-logo-color: #000000;
+    --h1-font-color: #000000;
+    --p-font-color: #444444;
+  
+    --input-background: #f0f0f0;
+    --input-text-color: #000000;
+    --input-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    --input-placeholder-text-color: #999999;
+    --input-button-background-color: #007bff;
+    --input-button-hover-background-color: #0056b3;
+  
+    --result-background-color: #ffffff;
+    --result-border: 1px solid #cccccc;
+    --result-box-shadow: 1px 1px 5px 5px #f0f0f0;
+    --result-title-font-color: #333333;
+    --result-table-font-color: #444444;
+    --result-table-bg-color: #f9f9f9;
+  
+    --loader-bg-color: #f5f5f5;
+    --loader-border: 1px solid #dddddd;
+    --loader-box-shadow: 1px 1px 10px 5px #eeeeee;
+    --loader-progress-bg-color: #007bff;
+    --loader-progress-box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.1);
+    --loader-animated-color: #007bff;
+  
+    --error-bg-color: #ffe5e5;
+    --error-border: 1px solid #ffcccc;
+    --error-font-color: #cc0000;
+  
+    --footer-text-color: #444444;
+  }
+  
+  [data-theme="dark"] {
+    --background-color: rgb(15, 15, 15);
+    --header-logo-color: white;
+    --h1-font-color: white;
+    --p-font-color: rgb(201, 201, 201);
+  
+    --input-background: #20212c;
+    --input-text-color: rgb(223, 223, 223);
+    --input-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.38);
+    --input-placeholder-text-color: rgb(187, 187, 187);
+    --input-button-background-color: #f30049ce;
+    --input-button-hover-background-color: #a50037;
+  
+    --result-background-color: #00000085;
+    --result-border: 1.5px solid #1e1f2471;
+    --result-box-shadow: 1px 1px 10px 10px #0000002c;
+    --result-title-font-color: rgb(192, 192, 192);
+    --result-table-font-color: rgb(201, 201, 201);
+    --result-table-bg-color: #191a27;
+  
+    --loader-bg-color: #272935;
+    --loader-border: 1.2px solid #5e6076;
+    --loader-box-shadow: 1px 1px 20px 10px #00000000;
+    --loader-progress-bg-color: #dd0155c9;
+    --loader-progress-box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.295);
+    --loader-animated-color: #fff;
+  
+    --error-bg-color: #262733;
+    --error-border: 1.2px solid #0000001a;
+    --error-font-color: rgb(233, 40, 66);
+  
+    --footer-text-color: rgb(223, 223, 223);
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--p-font-color);
+  }
+  
+  .guide {
+    background-color: var(--result-background-color);
+    border: var(--result-border);
+    box-shadow: var(--result-box-shadow);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .guide h3 {
+    color: var(--result-title-font-color);
+  }
+  
+  .guide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  

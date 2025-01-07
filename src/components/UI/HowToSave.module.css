@@ -1,0 +1,44 @@
+/* HowToSave.module.css */
+
+.container {
+    background-color: var(--background-color);
+    color: var(--p-font-color);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    color: var(--h1-font-color);
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    margin: 8px 0;
+  }
+  
+  button {
+    background-color: var(--input-button-background-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 12px 0;
+  }
+  
+  button:hover {
+    background-color: var(--input-button-hover-background-color);
+  }
+  
+  h3 {
+    color: var(--h1-font-color);
+    font-size: 18px;
+    margin-top: 12px;
+  }
+  
+  .step {
+    margin-bottom: 24px;
+  }
+  

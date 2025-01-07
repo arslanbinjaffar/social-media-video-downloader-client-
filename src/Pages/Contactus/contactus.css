@@ -112,3 +112,11 @@
   border-radius: 5px;
   font-size: 0.9rem;
 }
+
+
+
+@media (max-width: 700px) {
+  .contact-container {
+    padding: 20px;
+  }
+}
